@@ -4,26 +4,26 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "a6200139968cebe5b1e3b9411b473f18",
+    "content-hash": "3d2aa2535b1b0352d0c4099af8e1abd2",
     "packages": [
         {
-            "name": "heidilabs/markov-php",
-            "version": "0.4",
+            "name": "decidedly/decidedly-markov",
+            "version": "v1.1.3",
             "source": {
                 "type": "git",
-                "url": "https://github.com/heidilabs/markov-php.git",
-                "reference": "288d5722b0e333fc1acd77df98c7e085b0acb7ac"
+                "url": "https://github.com/Decidedly/DecidedlyMarkov.git",
+                "reference": "c836bca45990c11048e7c91b77e9d70b139e655f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/heidilabs/markov-php/zipball/288d5722b0e333fc1acd77df98c7e085b0acb7ac",
-                "reference": "288d5722b0e333fc1acd77df98c7e085b0acb7ac",
+                "url": "https://api.github.com/repos/Decidedly/DecidedlyMarkov/zipball/c836bca45990c11048e7c91b77e9d70b139e655f",
+                "reference": "c836bca45990c11048e7c91b77e9d70b139e655f",
                 "shasum": ""
             },
             "type": "library",
             "autoload": {
-                "psr-0": {
-                    "": "src/"
+                "psr-4": {
+                    "Decidedly\\": "src/Decidedly"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -32,16 +32,12 @@
             ],
             "authors": [
                 {
-                    "name": "Erika Heidi",
-                    "email": "erika@erikaheidi.com"
+                    "name": "David Hilowitz",
+                    "email": "dhilowitz@gmail.com"
                 }
             ],
-            "description": "A simple markov chain experiment",
-            "homepage": "https://github.com/heidilabs/markov-php",
-            "keywords": [
-                "markov"
-            ],
-            "time": "2015-06-04T11:47:54+00:00"
+            "description": "A simple markov chain text generator.",
+            "time": "2015-02-21T18:04:15+00:00"
         },
         {
             "name": "squizlabs/php_codesniffer",

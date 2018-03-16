@@ -1,8 +1,8 @@
 {
     "name": "adamb/markovdemo",
     "require": {
-        "heidilabs/markov-php": "^0.4.0",
-        "squizlabs/php_codesniffer": "^3.2"
+        "squizlabs/php_codesniffer": "^3.2",
+        "decidedly/decidedly-markov": "^1.1"
     },
     "authors": [
         {
