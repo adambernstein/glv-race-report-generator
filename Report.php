@@ -15,7 +15,7 @@ class Report {
 		$markov->parseText($text);
         $output = "<p>";
         for ($i = 0; $i<6; $i++) {
-            $string = $markov->generateText(rand(220, 320), 2, true);
+            $string = $markov->generateText(rand(140, 240), 2, true);
             $last_dot_at = strripos($string, ".");
             $cleaned_string = substr($string, 0, $last_dot_at);
             $output .= ucfirst($cleaned_string) . ".<br>";
