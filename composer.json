@@ -9,5 +9,6 @@
             "name": "Adam Bernstein",
             "email": "abernstein@pih.org"
         }
-    ]
+    ],
+    "description": "Markov chain based app for producing GLV-style race reports"
 }

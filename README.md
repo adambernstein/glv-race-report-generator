@@ -5,7 +5,6 @@ This little app uses what's known as a <a href="https://en.wikipedia.org/wiki/Ma
 
 ENJOY!
 
-Love,<br>Adam
 
 Try it out <a href="https://adambernste.in/reportgenerator#generatedText" target="_blank">here</a>
 
