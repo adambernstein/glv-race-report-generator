@@ -5,17 +5,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Sam Report Generator</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!--link rel="stylesheet" type="text/css" media="screen" href="main.css" /-->
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css">
 </head>
 <body>
-    <a id = "sam" class="generator" href="#">Generate</a>
-    <div id="generatedText"></div>
+    <div id ="generatorForm">
+        <select id="nameSelect">
+                <option value="sam">Sam</option>
+                <option value="cole">Cole</option>
+                <option value="gina">Gina</option>
+                <option value="gerry">Gerry</option>
+                <option value="dom">Dom goes to China</option>
+
+        </select>
+        <a id = "generateButton" class="generator" href="#generatedText">RE-GENERATE</a>
+        <div id="generatedText"></div>
+    </div>
 
     <script>
-        let genCollection =  document.getElementsByClassName('generator');
-        for (i=0;i<genCollection.length; i++){
-            genCollection[i].addEventListener('click', generate);
-        }
+        let nameSelect =  document.getElementById('nameSelect'),
+            generateButton = document.getElementById('generateButton');
+        generateButton.addEventListener('click', generate);
+        window.addEventListener('load', generate);
+        nameSelect.addEventListener('change', generate);
+       
         function generate() {
             var xhttp = new XMLHttpRequest();
             xhttp.onreadystatechange = function() {
@@ -24,7 +36,7 @@
                 document.getElementById("generatedText").innerHTML = xhttp.responseText;
                 }
             };
-            xhttp.open("GET", "Report.php?name="+this.id, true);
+            xhttp.open("GET", "Report.php?name="+nameSelect.value, true);
             xhttp.send();
         }
 

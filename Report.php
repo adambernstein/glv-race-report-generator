@@ -14,11 +14,14 @@ class Report {
         $text = file_get_contents($source);
 		$markov->parseText($text);
         $output = "<p>";
-        for ($i = 0; $i<6; $i++) {
-            $string = $markov->generateText(rand(140, 240), 2, true);
+        for ($i = 0; $i<4; $i++) {
+            $string = $markov->generateText(rand(140, 300), 2, true);
             $last_dot_at = strripos($string, ".");
             $cleaned_string = substr($string, 0, $last_dot_at);
-            $output .= ucfirst($cleaned_string) . ".<br>";
+            if (strlen($cleaned_string)) {
+                $output .= ucfirst($cleaned_string) . ".<br>";
+            }
+            else $output .= "<br>";
         }
         return $output;
     }
@@ -27,7 +30,6 @@ class Report {
 //$generator = new Report;
 //$generator->generate();
 $name=isset($_REQUEST["name"]) ? $_REQUEST["name"] : null;
-echo Report::generate($name);
+echo Report::generate($name) . "</p>" . "<p>-". ucfirst($_REQUEST["name"]) . "</p>";
+
 ?>
-
-
